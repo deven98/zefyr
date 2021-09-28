@@ -113,13 +113,7 @@ class ZefyrSelectionOverlayState extends State<ZefyrSelectionOverlay>
     // TODO: implement bringIntoView
   }
 
-  @override
-  void hideToolbar([value]) {
-    _didCaretTap = false; // reset double tap.
-    _toolbar?.remove();
-    _toolbar = null;
-    _toolbarController?.stop();
-  }
+
 
   static const Duration _kFadeDuration = Duration(milliseconds: 150);
 
@@ -322,6 +316,14 @@ class ZefyrSelectionOverlayState extends State<ZefyrSelectionOverlay>
   @override
   void userUpdateTextEditingValue(TextEditingValue value, SelectionChangedCause cause) {
     // TODO: implement userUpdateTextEditingValue
+  }
+
+  @override
+  void hideToolbar([bool hideHandles = true]) {
+    _didCaretTap = false; // reset double tap.
+    _toolbar?.remove();
+    _toolbar = null;
+    _toolbarController?.stop();
   }
 }
 
