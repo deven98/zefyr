@@ -325,6 +325,26 @@ class ZefyrSelectionOverlayState extends State<ZefyrSelectionOverlay>
     _toolbar = null;
     _toolbarController?.stop();
   }
+
+  @override
+  void copySelection(SelectionChangedCause cause) {
+    // TODO: implement copySelection
+  }
+
+  @override
+  void cutSelection(SelectionChangedCause cause) {
+    // TODO: implement cutSelection
+  }
+
+  @override
+  Future<void> pasteText(SelectionChangedCause cause) {
+    // TODO: implement pasteText
+  }
+
+  @override
+  void selectAll(SelectionChangedCause cause) {
+    // TODO: implement selectAll
+  }
 }
 
 enum _SelectionHandlePosition { base, extent }
